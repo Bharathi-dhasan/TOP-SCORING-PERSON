@@ -1,0 +1,69 @@
+import java.util.*;
+ public class Main
+{
+  public static void main (String[]args)
+  {
+   Scanner s = new Scanner (System.in);
+   int a = s.nextInt ();
+     int x = 0,n=0,e=0,y=0,max=0;
+    String q = new String ("");
+    String[] z = new String[100];
+    String[] b = new String[a];
+    int m[]=new int[((a*3))];
+    String c[] = new String[(a*4)+1];
+    String[] d = new String[c.length-1];
+    for (int i = 0; i <a+1; i++)
+      {
+    q = s.nextLine ();
+	z = q.split (":");
+	for(String w:z){
+    c[x]=w;
+    x++;
+    }}
+    for(int r=1;r<c.length;r++)
+       { d[n]=c[r];
+        n++;
+           
+       }
+       //System.out.println(d[3]);
+    for(int k=0;k<d.length;k++)
+       { if(k>0 && k%4!=0){
+          m[e]=Integer.parseInt(d[k]);
+          e++;
+       }
+       if(k%4==0){
+          b[y]=(d[k]);
+          y++;
+       }
+           
+       }
+    
+        int u=0;
+		int h[]=new int[a];
+		for(int i=0;i<m.length;i+=3){
+		    for(int j=i;j<i+3;j++){
+		        h[u]+=m[j];
+		    }
+		    u++;
+		}
+		for(int i=0;i<h.length;i++){
+		    if(max<h[i]){
+		       max=h[i];
+		   // System.out.println(h[i]);
+		}
+		}
+		for(int i=0;i<h.length;i++){
+		    if(max==h[i])
+		    {
+		        System.out.println(b[i]);
+		    }
+		}
+	 
+	  
+	  
+      }
+  }
+	    
+
+
+
